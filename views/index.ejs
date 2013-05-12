@@ -1,0 +1,8 @@
+<% if (!user) { %>
+	<h2>Welcome! Please log in.</h2>
+  <a href="/auth/twitter"><img src="sign-in-twitter.png" width="151" height="24"></a><br/>
+  <a href="/auth/facebook"><img src="sign-in-facebook.png" width="151" height="24"></a><br/>
+<% } else { %>
+	<h2>Hello, <%= user.name %>.</h2>
+  <img src="<%= user.image %>"/>
+<% } %>
